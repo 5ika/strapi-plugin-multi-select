@@ -108,7 +108,7 @@ const MultiSelect = ({
           error={fieldError}
           name={name}
           id={name}
-          disabled={disabled || possibleOptions.length === 0}
+          isDisabled={disabled || possibleOptions.length === 0}
           placeholder={placeholder}
           value={sanitizedValue.map((val) => ({
             label: formatMessage({
