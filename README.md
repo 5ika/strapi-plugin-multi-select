@@ -2,30 +2,16 @@
 
 A strapi custom field for selecting multiple options from a provided list of items.
 
-### CHANGELOG
-
-**1.2.2** Support colons in option values, only first colon is used as separator 
-
-> example usage: `this_is_label:all:of:this:is:value`
-
-**1.2.1** Localize option label
-
-> example usage: `my.custom.translations.key:value`
-
-
-**1.2.0** Replace strapi select with react-select
-
-
 ## Installation
 
 To install this plugin, you need to add an NPM dependency to your Strapi application:
 
 ```
 # Using Yarn
-yarn add strapi-plugin-multi-select
+yarn add strapi-plugin-multi-select@https://github.com/5ika/strapi-plugin-multi-select.git
 
 # Or using NPM
-npm install strapi-plugin-multi-select
+npm install git+https://github.com/5ika/strapi-plugin-multi-select.git
 ```
 
 Then, you'll need to build your admin panel:
