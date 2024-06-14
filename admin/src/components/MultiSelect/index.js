@@ -25,7 +25,8 @@ const CustomMultiValueContainer = (props) => {
       type="button"
       tabIndex={-1}
       icon={<Cross />}
-      onClick={handleTagClick(props.data)}>
+      onClick={handleTagClick(props.data)}
+    >
       {props.data.label}
     </Tag>
   )
@@ -83,7 +84,7 @@ const MultiSelect = ({
     }
     return Array.isArray(parsedValue)
       ? possibleOptions.filter((option) =>
-          parsedValue.some((val) => option.value === val),
+          parsedValue.some((val) => option.value === val)
         )
       : []
   }, [value, possibleOptions])
@@ -97,7 +98,8 @@ const MultiSelect = ({
       hint={description && formatMessage(description)}
       error={fieldError}
       name={name}
-      required={required}>
+      required={required}
+    >
       <Flex direction="column" alignItems="stretch" gap={1}>
         <FieldLabel>{formatMessage(intlLabel)}</FieldLabel>
         <StyleSelect
@@ -108,7 +110,7 @@ const MultiSelect = ({
           id={name}
           disabled={disabled || possibleOptions.length === 0}
           placeholder={placeholder}
-          defaultValue={sanitizedValue.map((val) => ({
+          value={sanitizedValue.map((val) => ({
             label: formatMessage({
               id: val.label,
               defaultMessage: val.label,
